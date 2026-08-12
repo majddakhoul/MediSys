@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediSys — Entity-Relationship Diagram</title>
+<link rel="stylesheet" href="css/diagrams.css">
+</head>
+<body>
+
+<header class="page-header">
+  <h1>MediSys — Entity-Relationship Diagram</h1>
+  <p>The data model shared by the Java GUI Edition and the original console engine.</p>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Diagrams Home</a><span class="sep">/</span>
+  <span>ERD</span><span class="sep">|</span>
+  <a href="class-diagram.html">Class Diagram</a>
+</nav>
+
+<div class="legend">
+  <span class="item"><span class="swatch" style="background:var(--entity)"></span> Root entity</span>
+  <span class="item"><span class="swatch" style="background:var(--accent-2)"></span> Doctor / Patient subtype</span>
+  <span class="item"><span class="swatch" style="background:var(--warn)"></span> Treatment / subtype</span>
+  <span class="item"><span class="line-sample"></span> Composition (owns)</span>
+  <span class="item"><span class="line-sample"></span> Generalization (ISA, hollow triangle)</span>
+  <span class="item"><span class="line-sample dashed"></span> Reference (FK, dashed)</span>
+</div>
+
+<div class="diagram-scroll">
+  <div class="diagram-canvas" style="width:1560px; height:1250px;">
+
+    <svg width="1560" height="1250" style="position:absolute; top:0; left:0;">
+      <defs>
+        <marker id="triangle" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+          <path d="M1,1 L11,6 L1,11 Z" fill="#0b0f18" stroke="#a78bfa" stroke-width="1.2"/>
+        </marker>
+        <marker id="diamond" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="14" markerHeight="14" orient="auto">
+          <path d="M1,6 L6,1 L11,6 L6,11 Z" fill="#7dd3fc" stroke="#7dd3fc"/>
+        </marker>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+          <path d="M1,1 L9,5 L1,9" fill="none" stroke="#fbbf24" stroke-width="1.6"/>
+        </marker>
+      </defs>
+
+      <g stroke="#7dd3fc" stroke-width="1.6" fill="none" marker-start="url(#diamond)">
+        <path d="M760,160 L170,230"/>
+        <path d="M800,160 L550,230"/>
+        <path d="M840,160 L1080,230"/>
+      </g>
+
+      <g stroke="#a78bfa" stroke-width="1.6" fill="none" marker-start="url(#triangle)">
+        <path d="M550,415 L360,475"/>
+        <path d="M550,415 L590,475"/>
+        <path d="M550,415 L820,475"/>
+        <path d="M1080,390 L1005,475"/>
+        <path d="M1080,390 L1255,475"/>
+        <path d="M1130,840 L990,900"/>
+        <path d="M1130,840 L1260,900"/>
+      </g>
+
+      <g stroke="#7dd3fc" stroke-width="1.6" fill="none" marker-start="url(#diamond)">
+        <path d="M1210,310 L1470,310 L1470,760 L1260,760"/>
+      </g>
+
+      <g stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrow)">
+        <path d="M1260,1015 L1260,1080 L170,1080 L170,345"/>
+        <path d="M1380,960 L1380,1130 L475,1130 L475,415"/>
+      </g>
+    </svg>
+
+    <div class="dbox root" style="left:680px; top:20px; width:240px;">
+      <div class="dbox-header">HOSPITAL</div>
+      <div class="dbox-caption">aggregate root</div>
+      <div class="dbox-row">clinics <span class="type">List&lt;Clinic&gt;</span></div>
+      <div class="dbox-row">doctors <span class="type">List&lt;Doctor&gt;</span></div>
+      <div class="dbox-row">patients <span class="type">List&lt;Patient&gt;</span></div>
+    </div>
+
+    <div class="dbox" style="left:60px; top:230px; width:220px;">
+      <div class="dbox-header">CLINIC</div>
+      <div class="dbox-row"><span class="key">PK</span>id <span class="type">int</span></div>
+      <div class="dbox-row">name <span class="type">String</span></div>
+      <div class="dbox-row">type <span class="type">String</span></div>
+    </div>
+
+    <div class="dbox" style="left:420px; top:230px; width:260px;">
+      <div class="dbox-header">DOCTOR</div>
+      <div class="dbox-row"><span class="key">PK</span>id <span class="type">int</span></div>
+      <div class="dbox-row">name <span class="type">String</span></div>
+      <div class="dbox-row">salary <span class="type">int</span></div>
+      <div class="dbox-row">birthDate <span class="type">LocalDate</span></div>
+      <div class="dbox-row">address <span class="type">String</span></div>
+      <div class="dbox-row">doctorType <span class="type">String «derived»</span></div>
+    </div>
+
+    <div class="dbox" style="left:950px; top:230px; width:260px;">
+      <div class="dbox-header">PATIENT</div>
+      <div class="dbox-row"><span class="key">PK</span>id <span class="type">int</span></div>
+      <div class="dbox-row">name <span class="type">String</span></div>
+      <div class="dbox-row">address <span class="type">String</span></div>
+      <div class="dbox-row">birthDate <span class="type">LocalDate</span></div>
+      <div class="dbox-row">patientType <span class="type">String «derived»</span></div>
+    </div>
+
+    <div class="dbox sub" style="left:260px; top:475px; width:200px;">
+      <div class="dbox-header">CONTRACTED_DOCTOR</div>
+      <div class="dbox-caption">ISA DOCTOR</div>
+      <div class="dbox-row">contractDate <span class="type">LocalDate</span></div>
+    </div>
+
+    <div class="dbox sub" style="left:490px; top:475px; width:200px;">
+      <div class="dbox-header">TRAINER_DOCTOR</div>
+      <div class="dbox-caption">ISA DOCTOR</div>
+      <div class="dbox-row">startDate <span class="type">LocalDate</span></div>
+      <div class="dbox-row">endDate <span class="type">LocalDate</span></div>
+    </div>
+
+    <div class="dbox sub" style="left:720px; top:475px; width:200px;">
+      <div class="dbox-header">INNER_DOCTOR</div>
+      <div class="dbox-caption">ISA DOCTOR</div>
+      <div class="dbox-row">numberOfDepartment <span class="type">int</span></div>
+    </div>
+
+    <div class="dbox sub" style="left:900px; top:475px; width:210px;">
+      <div class="dbox-header">EXTERNAL_PATIENT</div>
+      <div class="dbox-caption">ISA PATIENT</div>
+      <div class="dbox-row">acceptance <span class="type">boolean</span></div>
+      <div class="dbox-row">acceptDate <span class="type">LocalDate</span></div>
+    </div>
+
+    <div class="dbox sub" style="left:1150px; top:475px; width:210px;">
+      <div class="dbox-header">INTERNAL_PATIENT</div>
+      <div class="dbox-caption">ISA PATIENT</div>
+      <div class="dbox-row">discharge <span class="type">boolean</span></div>
+      <div class="dbox-row">dischargeDate <span class="type">LocalDate</span></div>
+    </div>
+
+    <div class="dbox treatment" style="left:1000px; top:680px; width:260px;">
+      <div class="dbox-header">TREATMENT</div>
+      <div class="dbox-row"><span class="key">PK</span>id <span class="type">int</span></div>
+      <div class="dbox-row">date <span class="type">LocalDate</span></div>
+      <div class="dbox-row">cost <span class="type">int</span></div>
+      <div class="dbox-row"><span class="fk">FK</span>patientId <span class="type">int</span></div>
+      <div class="dbox-row">treatmentType <span class="type">String «derived»</span></div>
+    </div>
+
+    <div class="dbox treatment sub" style="left:880px; top:900px; width:220px;">
+      <div class="dbox-header">INTERNAL_TREATMENT</div>
+      <div class="dbox-caption">ISA TREATMENT</div>
+      <div class="dbox-row">depID <span class="type">int</span></div>
+    </div>
+
+    <div class="dbox treatment sub" style="left:1140px; top:900px; width:240px;">
+      <div class="dbox-header">EXTERNAL_TREATMENT</div>
+      <div class="dbox-caption">ISA TREATMENT</div>
+      <div class="dbox-row"><span class="fk">FK</span>doctorId <span class="type">int</span></div>
+      <div class="dbox-row"><span class="fk">FK</span>clinicId <span class="type">int</span></div>
+    </div>
+
+    <div class="edge-label" style="left:730px; top:172px;">1</div>
+    <div class="edge-label" style="left:160px; top:200px;">0..*</div>
+    <div class="edge-label" style="left:540px; top:200px;">0..*</div>
+    <div class="edge-label" style="left:1070px; top:200px;">0..*</div>
+
+    <div class="edge-label" style="left:1220px; top:295px;">1</div>
+    <div class="edge-label" style="left:1215px; top:745px;">0..*</div>
+
+    <div class="edge-label" style="left:1265px; top:1070px;">0..*</div>
+    <div class="edge-label" style="left:145px; top:355px;">1</div>
+
+    <div class="edge-label" style="left:1385px; top:1120px;">0..*</div>
+    <div class="edge-label" style="left:450px; top:425px;">1</div>
+
+  </div>
+</div>
+
+<footer class="diagram-footer">
+  MediSys diagrams — see <a href="../original-java-source/docs/DOMAIN.md">DOMAIN.md</a>
+  for the full written description of every entity and rule.
+</footer>
+
+</body>
+</html>

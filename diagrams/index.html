@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediSys — Diagrams</title>
+<link rel="stylesheet" href="css/diagrams.css">
+<style>
+  .cards { max-width: 900px; margin: 40px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; padding: 0 20px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; text-decoration: none; color: var(--text); transition: transform .15s ease, border-color .15s ease; display: block; }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .card h2 { margin: 0 0 8px; font-size: 18px; color: var(--accent); }
+  .card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>MediSys — Diagrams</h1>
+  <p>Static reference diagrams for the MediSys domain model — shared by the
+     Java GUI Edition and the original console engine.</p>
+</header>
+
+<div class="cards">
+  <a class="card" href="erd.html">
+    <h2>Entity-Relationship Diagram &rarr;</h2>
+    <p>Clinic, Doctor, Patient, and Treatment as data entities, with primary
+       keys, foreign keys, generalization (ISA) hierarchies for every
+       subtype, and the composition/reference relationships between them.</p>
+  </a>
+  <a class="card" href="class-diagram.html">
+    <h2>UML Class Diagram &rarr;</h2>
+    <p>The same hierarchy as actual Java classes: fields with visibility,
+       key methods, inheritance arrows, and the composition/association
+       arrows that mirror the real object references in the code.</p>
+  </a>
+</div>
+
+<footer class="diagram-footer">
+  Part of the MediSys package — see the top-level
+  <a href="../README.md">README</a> for the Java GUI Edition and the
+  original console engine.
+</footer>
+
+</body>
+</html>
