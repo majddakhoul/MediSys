@@ -2,7 +2,7 @@
 
 <br/>
 
-<h1>MediSys</h1>
+<h1>Simple Medical System</h1>
 
 <p><strong>A hospital management system, implemented twice over</strong><br/>
 Doctors, patients, clinics, and treatments with full CRUD, polymorphic entity hierarchies,
