@@ -1,5 +1,7 @@
 # Domain Model
 
+[⬅ Edition README](README.md) · [العربية](DOMAIN.ar.md)
+
 ## Doctors (`doctors/`)
 
 | Class | Extra fields | Meaning |

@@ -1,5 +1,7 @@
 # MediSys — Original Console Edition (Fixed)
 
+[⬅ Main README](../../README.md) · [العربية](README.ar.md)
+
 The original Java console engine for MediSys: a hospital management system
 handling doctors, patients, clinics, and treatments through full CRUD
 operations, driven by a text menu.

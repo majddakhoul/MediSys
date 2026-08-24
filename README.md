@@ -15,6 +15,8 @@ and file-backed persistence — driven from a terminal menu or a native desktop 
   <img src="https://img.shields.io/badge/license-MIT-orange?style=flat-square" alt="License"/>
 </p>
 
+<p><a href="README.ar.md">العربية</a></p>
+
 <br/>
 
 </div>
@@ -39,8 +41,8 @@ and file-backed persistence — driven from a terminal menu or a native desktop 
 
 | Edition | Stack | Run it | Docs |
 |---|---|---|---|
-| **[Java GUI Edition](Java-GUI-Edition/)** | Java Swing, JDK 17+ | `javac` + `java Main` — see docs | [`Java-GUI-Edition/docs/`](Java-GUI-Edition/docs/README.md) |
-| **[Original Console Engine](original-java-source/)** | Plain Java, JDK 17+ | `java Main` (interactive menu) | [`original-java-source/docs/`](original-java-source/docs/README.md) |
+| **[Java GUI Edition](Java-GUI-Edition/)** | Java Swing, JDK 17+ | `javac` + `java Main` — see docs | [`README`](Java-GUI-Edition/docs/README.md) · [`README.ar`](Java-GUI-Edition/docs/README.ar.md) · [`UI Guide`](Java-GUI-Edition/docs/UI_GUIDE.md) |
+| **[Original Console Engine](original-java-source/)** | Plain Java, JDK 17+ | `java Main` (interactive menu) | [`README`](original-java-source/docs/README.md) · [`README.ar`](original-java-source/docs/README.ar.md) |
 
 Both editions share the exact same domain model (`doctors`, `patient`, `treatment`, `hospital`
 packages) and the exact same bug fixes — pick the interactive desktop app for day-to-day data
@@ -93,7 +95,9 @@ java -cp out Main
 | `hospital` | `Hospital` (aggregate root), `Clinic` | — |
 
 Full field-by-field detail is in each edition's `docs/DOMAIN.md`
-([Java GUI](Java-GUI-Edition/docs/DOMAIN.md) · [console](original-java-source/docs/DOMAIN.md)).
+([Java GUI](Java-GUI-Edition/docs/DOMAIN.md) · [console](original-java-source/docs/DOMAIN.md)),
+also available in Arabic
+([Java GUI](Java-GUI-Edition/docs/DOMAIN.ar.md) · [console](original-java-source/docs/DOMAIN.ar.md)).
 
 ---
 
@@ -162,10 +166,14 @@ MediSys-Complete/
 
 ## Documentation Index
 
-| Edition | Overview & build/run | Domain model |
-|---|---|---|
-| Java GUI | [README](Java-GUI-Edition/docs/README.md) | [DOMAIN](Java-GUI-Edition/docs/DOMAIN.md) |
-| Console engine | [README](original-java-source/docs/README.md) | [DOMAIN](original-java-source/docs/DOMAIN.md) |
+| Edition | Overview & build/run | Domain model | UI guide |
+|---|---|---|---|
+| Java GUI | [README](Java-GUI-Edition/docs/README.md) · [العربية](Java-GUI-Edition/docs/README.ar.md) | [DOMAIN](Java-GUI-Edition/docs/DOMAIN.md) · [العربية](Java-GUI-Edition/docs/DOMAIN.ar.md) | [UI_GUIDE](Java-GUI-Edition/docs/UI_GUIDE.md) · [العربية](Java-GUI-Edition/docs/UI_GUIDE.ar.md) |
+| Console engine | [README](original-java-source/docs/README.md) · [العربية](original-java-source/docs/README.ar.md) | [DOMAIN](original-java-source/docs/DOMAIN.md) · [العربية](original-java-source/docs/DOMAIN.ar.md) | — |
+
+| Root document | Link |
+|---|---|
+| This document, in Arabic | [`README.ar.md`](README.ar.md) |
 
 | Diagram | Link |
 |---|---|

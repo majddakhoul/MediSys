@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java-GUI-Edition/Java-GUI-Edition.iml" filepath="$PROJECT_DIR$/Java-GUI-Edition/Java-GUI-Edition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Simple-Medical-System.iml" filepath="$PROJECT_DIR$/.idea/Simple-Medical-System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/original-java-source/original-java-source.iml" filepath="$PROJECT_DIR$/original-java-source/original-java-source.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,5 +1,7 @@
 # MediSys — Java Swing Edition
 
+[⬅ Main README](../../README.md) · [العربية](README.ar.md)
+
 A native desktop GUI for MediSys, built directly on top of the same
 (fixed) domain model as the console engine: full CRUD for clinics,
 doctors, patients, and treatments, with a proper file-backed Save/Open
@@ -73,6 +75,8 @@ with the Java extension and run `Main.java` directly.
 
 ## Using the app
 
+Every Add dialog is captured with real screenshots in [`docs/UI_GUIDE.md`](UI_GUIDE.md) — this section is a quick summary; that guide covers the type-driven fields of each dialog one by one.
+
 1. **Clinics** tab — add a clinic (name + type) before adding External
    treatments, since those need a clinic to point at.
 2. **Doctors** tab — add doctors of any of the four types; External
@@ -94,6 +98,7 @@ other, since it's the same engine underneath.
 
 ## See also
 
+- [`docs/UI_GUIDE.md`](UI_GUIDE.md) — every Add dialog, with real screenshots.
 - [`docs/DOMAIN.md`](DOMAIN.md) — the entity model and CRUD rules in detail.
 - [Diagrams](../../diagrams/index.html) — ERD and class diagrams for the whole
   MediSys domain model (shared by both editions).
